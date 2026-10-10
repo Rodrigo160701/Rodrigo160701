@@ -19,7 +19,7 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 <rect x=".5" y=".5" width="879" height="269" rx="14" fill="#0d1117" stroke="#30363d"/>
 <text class="t" x="28" y="42">Actividad en GitHub</text>
 <text class="s" x="852" y="42" text-anchor="end">últimos 12 meses · actualizado el 10 oct 2026</text>
-<g class="k" style="animation-delay:0ms"><text class="v" x="28.0" y="96">33</text><text class="l" x="28.0" y="116">contribuciones</text></g>
+<g class="k" style="animation-delay:0ms"><text class="v" x="28.0" y="96">35</text><text class="l" x="28.0" y="116">contribuciones</text></g>
 <g class="k" style="animation-delay:90ms"><text class="v" x="234.0" y="96">8</text><text class="l" x="234.0" y="116">días activos</text></g>
 <g class="k" style="animation-delay:180ms"><text class="v" x="440.0" y="96">1</text><text class="l" x="440.0" y="116">días de racha actual</text></g>
 <g class="k" style="animation-delay:270ms"><text class="v" x="646.0" y="96">1</text><text class="l" x="646.0" y="116">días de racha máxima</text></g>
@@ -75,7 +75,7 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 <rect class="b" style="animation-delay:686ms" x="792.6" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:700ms" x="808.2" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:714ms" x="823.8" y="140.0" width="12.6" height="88.0" rx="2.5" fill="url(#gv)"><title>13 contribuciones</title></rect>
-<rect class="b" style="animation-delay:728ms" x="839.4" y="180.6" width="12.6" height="47.4" rx="2.5" fill="url(#gv)"><title>7 contribuciones</title></rect>
+<rect class="b" style="animation-delay:728ms" x="839.4" y="167.1" width="12.6" height="60.9" rx="2.5" fill="url(#gv)"><title>9 contribuciones</title></rect>
 <text class="m" x="90.4" y="248">nov</text>
 <text class="m" x="168.4" y="248">dic</text>
 <text class="m" x="230.8" y="248">ene</text>
