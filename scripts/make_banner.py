@@ -7,9 +7,9 @@ ROLE = "Data Analyst · Automatizaciones · Desarrollo con IA"
 PROMPT = "~/rodrigo $ whoami"
 PHRASES = [
     "Análisis de datos con Python, pandas y machine learning",
-    "Automatizaciones e integraciones entre sistemas",
+    "Integraciones entre sistemas con APIs y webhooks",
     "Desarrollo con IA: búsquedas en lenguaje natural",
-    "CRMs a medida con leads en tiempo real",
+    "Agentes de IA y +80 automatizaciones en n8n",
 ]
 
 THEMES = {
@@ -21,7 +21,7 @@ THEMES = {
 
 NODES = {
     "meta": (800, 78, "Meta"), "google": (800, 150, "Google"), "web": (800, 222, "Web"),
-    "queue": (925, 150, "Webhooks"), "crm": (1040, 100, "CRM"), "bq": (1040, 200, "ERP"),
+    "queue": (925, 150, "Webhooks"), "crm": (1040, 100, "n8n"), "bq": (1040, 200, "ERP"),
     "kpi": (1135, 150, "KPIs"),
 }
 EDGES = [("meta", "queue"), ("google", "queue"), ("web", "queue"), ("queue", "crm"),

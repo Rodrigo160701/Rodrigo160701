@@ -12,12 +12,12 @@
 
 ## 👋 Sobre mí
 
-Soy **analista de datos y de automatizaciones**, y desarrollo software apoyándome en **IA**. Convierto los datos de una empresa en dashboards y decisiones, y automatizo lo que mueve **leads, clientes y ventas**: CRMs a medida, APIs e integraciones entre sistemas y plataformas de marketing.
+Soy **analista de datos y de automatizaciones**, y desarrollo software apoyándome en **IA**. Convierto datos en dashboards y decisiones, automatizo procesos de punta a punta y construyo sistemas a medida para empresas.
 
-- 🔭 **Ahora mismo:** construyendo un CRM multipaís a medida, integrado con el ERP, las plataformas de anuncios y la base de datos de marketing.
+- 🔭 **Ahora mismo:** desarrollando proyectos grandes a medida para una empresa europea, y automatizando todo lo que se repite.
 - 🎓 **Estudiando** el Bachelor *International Business Management – Data Science, Protection & Security* en **Thomas More** (Bélgica): Data Science, Machine Learning & Forecasting, DevOps y Data as a Service.
-- 🧠 **Me interesa:** análisis de datos, calidad de datos, atribución de marketing, forecasting y llevar la IA a casos de uso reales.
-- 🔒 **La mayor parte de mi trabajo vive en repositorios privados de empresa.** Más abajo explico qué hice y cómo, sin enseñar código ni datos.
+- 🧠 **Me interesa:** análisis de datos, agentes de IA, automatización, calidad de datos y forecasting.
+- 🔒 **La mayor parte de mi trabajo vive en repositorios privados de empresa.** Abajo cuento qué tipo de cosas hago, sin enseñar código ni datos.
 
 ## 🛠️ Stack
 
@@ -26,6 +26,8 @@ Soy **analista de datos y de automatizaciones**, y desarrollo software apoyándo
 </p>
 
 <p>
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/>
+  <img src="https://img.shields.io/badge/Agentes%20IA%20%C2%B7%20RAG-8b5cf6?style=flat-square" alt="Agentes IA y RAG"/>
   <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas"/>
   <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
@@ -38,96 +40,72 @@ Soy **analista de datos y de automatizaciones**, y desarrollo software apoyándo
   <img src="https://img.shields.io/badge/LLMs%20%2F%20OpenAI%20API-111111?style=flat-square" alt="LLMs"/>
   <img src="https://img.shields.io/badge/Meta%20Marketing%20API-0866FF?style=flat-square&logo=meta&logoColor=white" alt="Meta Marketing API"/>
   <img src="https://img.shields.io/badge/Google%20Ads%20API-4285F4?style=flat-square&logo=googleads&logoColor=white" alt="Google Ads API"/>
-  <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/>
+  <img src="https://img.shields.io/badge/Google%20Workspace-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google Workspace"/>
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white" alt="Slack"/>
+  <img src="https://img.shields.io/badge/WooCommerce-96588A?style=flat-square&logo=woocommerce&logoColor=white" alt="WooCommerce"/>
 </p>
 
-## 🚀 Trabajo destacado
+## 🚀 Lo que hago
 
 > [!NOTE]
-> Son proyectos reales en producción dentro de una empresa europea de tecnología IoT. Por confidencialidad no publico código, datos ni nombres. Aquí cuento el problema, la arquitectura y las decisiones.
+> Trabajo real en producción dentro de empresa. Por confidencialidad no publico código, datos ni nombres.
 
-### 🧩 CRM multipaís a medida con leads en tiempo real
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**El problema:** los leads llegaban de muchos sitios (Meta Lead Ads, formularios de Google, la web, WhatsApp) para cinco mercados europeos. El histórico estaba en un CRM SaaS, las ventas en el ERP, y nadie podía responder a la pregunta clave: *¿qué campaña trae clientes que pagan?*
+### 🏗️ Grandes proyectos a medida
 
-**Lo que hice:** construí el CRM y diseñé cómo se integra con todo lo demás: el ERP, las plataformas de anuncios y la base de datos de marketing que monta una agencia externa.
+Desarrollo **sistemas completos de gran escala** para una empresa multipaís: plataformas internas que conectan captación, clientes, ventas y operaciones entre varios sistemas.
 
-- ⚡ **Leads al momento.** Llegan por webhook y el CRM los recibe en segundos. Endpoint **idempotente** (el mismo lead enviado diez veces es un solo lead), respuesta `202` inmediata con procesado en segundo plano y *rate limiting*. Definí el contrato de entrega con reintentos y cola, así que si el CRM se cae no se pierde ningún lead.
-- 🧹 **Migración y limpieza de 6 años de histórico** desde HubSpot: decenas de miles de contactos y cientos de miles de llamadas, notas y tareas. Casé cada registro con los clientes del ERP por orden de fiabilidad (vínculo directo → email/teléfono normalizados → id de la app), separé el ruido (spam, contactos vacíos, llamadas sin identidad) dejando trazado el motivo de cada descarte, y reconstruí el historial de etapas de cada lead.
-- 🔗 **Deduplicación automática** con reglas de negocio: se fusionan las fichas que son la misma persona, pero nunca dos clientes distintos del ERP (por ejemplo, una finca y su cooperativa); esos se relacionan.
-- 🧭 **Operación comercial:** asignación de leads por país, SLA de 15 minutos por lead, automatizaciones por evento y registro de consentimientos.
-- 📊 **Medición de verdad:** el CRM entrega cada noche sus informes a la base de marketing, sin datos personales (solo identificadores internos). Con eso el análisis pasa de "coste por lead" a **coste por venta, CAC y ROAS por campaña**. Además hay una conciliación diaria lead a lead entre las dos bases.
-- 🔁 **Bucle cerrado con Meta y Google:** las cualificaciones y las ventas vuelven a las plataformas (Conversions API y conversiones mejoradas). Los datos de usuario van con hash SHA-256 y un `event_id` estable para deduplicar. Así las campañas optimizan hacia quien compra, no hacia quien solo rellena un formulario.
-- 🛡️ **RGPD y seguridad desde el diseño:** datos en la UE, nada de datos personales fuera del CRM, accesos con el mínimo privilegio y rotación de credenciales.
+- Arquitectura **orientada a eventos** con webhooks y APIs REST
+- Procesamiento **asíncrono** con colas, reintentos e idempotencia
+- **Migración y unificación** de datos históricos entre sistemas
+- Integraciones con **ERP, plataformas de anuncios y herramientas SaaS**
+- **Privacidad y seguridad** desde el diseño (RGPD)
 
-<details>
-<summary><b>Ver arquitectura</b></summary>
+<sub>Python · FastAPI · PostgreSQL · Docker · APIs REST</sub>
 
-```mermaid
-flowchart LR
-    subgraph SRC["Captación"]
-        M["Meta Lead Ads"]
-        G["Google Lead Forms"]
-        W["Formularios web"]
-    end
-    subgraph AG["Agencia de marketing"]
-        PIPE["Pipeline de captación"]
-        Q[["Cola con reintentos"]]
-        DWH[("Base de datos<br/>de marketing")]
-    end
-    INT["ERP · telefonía · tienda · email"]
-    CRM["CRM<br/>routing · SLA · automatizaciones"]
-    BI["Cuadro de mando<br/>CAC · ROAS · coste por venta"]
-    ADS["Meta CAPI · Google Ads<br/>conversiones con hash"]
+</td>
+<td width="50%" valign="top">
 
-    M & G & W -- webhooks --> PIPE
-    PIPE --> DWH
-    PIPE --> Q -- "202 · idempotente" --> CRM
-    INT --> CRM
-    CRM -- "informes nocturnos · sin datos personales" --> DWH
-    DWH --> BI
-    CRM -. "cualificaciones y ventas" .-> ADS
-```
+### ⚙️ +80 automatizaciones en n8n
 
-**Decisiones de diseño**
+Unos **2.000 nodos** en producción que ahorran horas de trabajo manual cada semana.
 
-| Decisión | Por qué |
-| --- | --- |
-| Webhooks y no sondeo para los leads | El SLA del comercial empieza al captar el lead: cada minuto de retraso se lo quita a él |
-| Idempotencia por `origen + id externo` | Hace seguros los reintentos y permite migrar de un flujo a otro en paralelo sin duplicar leads |
-| Cola con reintentos entre la agencia y el CRM | Desacopla los dos lados: si uno cae, el otro sigue funcionando y la cola recupera lo pendiente |
-| Volcado sin datos personales | El análisis cruza y cuenta con identificadores internos, sin mover PII fuera del CRM |
-| Un solo emisor de conversiones por plataforma | Dos emisores del mismo evento inflan las conversiones y ensucian la optimización |
-| Corte por fases con conciliación | Cada fuente antigua se apaga solo tras dos semanas sin diferencias |
+- 🤖 **Agentes de IA** de atención al cliente con **RAG** y multiagente
+- 💬 **Moderación y respuesta automática** a comentarios, mensajes y reseñas, en varios idiomas
+- 📥 **Clasificación inteligente** de correos y llamadas con LLMs
+- 🎯 **Captación de leads** de formularios y anuncios de varios países
+- 💶 **Procesos financieros:** cobros, mandatos, impagos y renovaciones
+- 📦 **Operaciones:** conciliación de pedidos, envíos, stock y devoluciones
+- 📊 **Informes y alertas** automáticas, con control de errores
 
-</details>
+<sub>n8n · OpenAI · Meta Graph API · Google Workspace · Slack · WooCommerce</sub>
 
-<sub>Python · APIs REST y webhooks · Meta Marketing API · Google Ads API · n8n · migración de datos · RGPD</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
----
+### 🔎 Búsqueda con IA en lenguaje natural
 
-### 🔎 Buscador de clientes multi-fuente con lenguaje natural
+Un servicio que cruza **todas las fuentes de datos** de la empresa y responde a preguntas en lenguaje natural, en cualquier idioma, explicando **por qué** sale cada resultado. La IA nunca ve datos de clientes: solo traduce la pregunta.
 
-Un servicio HTTP independiente que encuentra clientes **combinando todas las fuentes de datos** de la empresa (ERP y geolocalización de dispositivos IoT) y explica **por qué** ha salido cada resultado.
+<sub>Python · FastAPI · LLMs · arquitectura de plugins</sub>
 
-- Un único endpoint con condiciones combinables (`all` / `any` / `not`) sobre cualquier campo de **30 tablas del ERP**: clientes, pedidos, renovaciones, impagos, incidencias… y también sobre zonas geográficas.
-- **Preguntas en lenguaje natural, en cualquier idioma,** que un LLM traduce a esas mismas condiciones. La IA **nunca ve datos de clientes**: solo elige condiciones de un catálogo.
-- Arquitectura de **plugins**: añadir una fuente nueva es un fichero, y aparece sola en la API, en el catálogo y en la IA, sin tocar el núcleo.
-- Consulta las fuentes **en vivo**, sin copiar el ERP a ningún sitio, y en **solo lectura** por diseño.
+</td>
+<td width="50%" valign="top">
 
-<sub>Python · FastAPI · SQLAlchemy · PostgreSQL · OpenAI API · Docker</sub>
+### 📊 Análisis de datos y dashboards
 
----
+Cuadros de mando de ventas y marketing que se usan a diario: lógica de negocio pasada de **Power BI (DAX) a pandas**, caché local y refresco automático, y análisis por canal, país y producto.
 
-### 📊 Análisis de datos y dashboards de negocio
+<sub>Python · pandas · Streamlit · Plotly · SQLite</sub>
 
-El análisis y los cuadros de mando que usa dirección para ventas y marketing.
-
-- Descarga en paralelo **19 tablas** de la API del ERP con **caché SQLite** en disco: el arranque es instantáneo y los datos se refrescan en segundo plano cada pocos minutos.
-- Pasé la lógica de negocio de **Power BI (DAX) a pandas** y la validé importe a importe con una vista de detalle factura → producto.
-- Ventas por canal, país y tipo de cliente, producto, unidades y PVP medio, y comparativas anuales y frente a presupuesto.
-
-<sub>Python · Streamlit · pandas · Plotly · SQLite · Docker</sub>
+</td>
+</tr>
+</table>
 
 <!-- PROJECTS:START -->
 ## 📂 Proyectos públicos y de formación

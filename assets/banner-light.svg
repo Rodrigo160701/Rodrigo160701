@@ -36,9 +36,9 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 <text class="name" x="68" y="146">Rodrigo Alonso Moreno</text>
 <text class="role" x="70" y="186">Data Analyst · Automatizaciones · Desarrollo con IA</text></g>
 <text class="ph" x="70" y="236" style="animation-delay:0s"><tspan class="mono" fill="#059669">▸ </tspan>Análisis de datos con Python, pandas y machine learning</text>
-<text class="ph" x="70" y="236" style="animation-delay:3s"><tspan class="mono" fill="#059669">▸ </tspan>Automatizaciones e integraciones entre sistemas</text>
+<text class="ph" x="70" y="236" style="animation-delay:3s"><tspan class="mono" fill="#059669">▸ </tspan>Integraciones entre sistemas con APIs y webhooks</text>
 <text class="ph" x="70" y="236" style="animation-delay:6s"><tspan class="mono" fill="#059669">▸ </tspan>Desarrollo con IA: búsquedas en lenguaje natural</text>
-<text class="ph" x="70" y="236" style="animation-delay:9s"><tspan class="mono" fill="#059669">▸ </tspan>CRMs a medida con leads en tiempo real</text>
+<text class="ph" x="70" y="236" style="animation-delay:9s"><tspan class="mono" fill="#059669">▸ </tspan>Agentes de IA y +80 automatizaciones en n8n</text>
 <path id="e-meta-queue" class="edge" d="M800,78 C862.5,78 862.5,150 925,150"/>
 <path id="e-google-queue" class="edge" d="M800,150 C862.5,150 862.5,150 925,150"/>
 <path id="e-web-queue" class="edge" d="M800,222 C862.5,222 862.5,150 925,150"/>
@@ -60,7 +60,7 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 <rect class="node" x="889.2" y="135" width="71.6" height="30" rx="15"/>
 <text class="nl" x="925" y="154" text-anchor="middle">Webhooks</text>
 <rect class="node" x="1022.2" y="85" width="35.6" height="30" rx="15"/>
-<text class="nl" x="1040" y="104" text-anchor="middle">CRM</text>
+<text class="nl" x="1040" y="104" text-anchor="middle">n8n</text>
 <rect class="node" x="1022.2" y="185" width="35.6" height="30" rx="15"/>
 <text class="nl" x="1040" y="204" text-anchor="middle">ERP</text>
 <rect class="node" x="1113.6" y="135" width="42.8" height="30" rx="15"/>
