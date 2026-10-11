@@ -18,7 +18,7 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 </style>
 <rect x=".5" y=".5" width="879" height="269" rx="14" fill="#0d1117" stroke="#30363d"/>
 <text class="t" x="28" y="42">Actividad en GitHub</text>
-<text class="s" x="852" y="42" text-anchor="end">últimos 12 meses · actualizado el 10 oct 2026</text>
+<text class="s" x="852" y="42" text-anchor="end">últimos 12 meses · actualizado el 11 oct 2026</text>
 <g class="k" style="animation-delay:0ms"><text class="v" x="28.0" y="96">402</text><text class="l" x="28.0" y="116">contribuciones</text></g>
 <g class="k" style="animation-delay:90ms"><text class="v" x="234.0" y="96">365</text><text class="l" x="234.0" y="116">en repos privados</text></g>
 <g class="k" style="animation-delay:180ms"><text class="v" x="440.0" y="96">4</text><text class="l" x="440.0" y="116">días de racha actual</text></g>
@@ -46,45 +46,45 @@ text{font-family:-apple-system,'Segoe UI',Ubuntu,'Helvetica Neue',sans-serif}
 <rect class="b" style="animation-delay:280ms" x="340.1" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:294ms" x="355.7" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:308ms" x="371.3" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
-<rect class="b" style="animation-delay:322ms" x="386.9" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
-<rect class="b" style="animation-delay:336ms" x="402.5" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
-<rect class="b" style="animation-delay:350ms" x="418.1" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
+<rect class="b" style="animation-delay:322ms" x="386.9" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
+<rect class="b" style="animation-delay:336ms" x="402.5" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
+<rect class="b" style="animation-delay:350ms" x="418.1" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:364ms" x="433.7" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
 <rect class="b" style="animation-delay:378ms" x="449.3" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
-<rect class="b" style="animation-delay:392ms" x="464.9" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
-<rect class="b" style="animation-delay:406ms" x="480.5" y="220.3" width="12.6" height="7.7" rx="2.5" fill="url(#gv)"><title>4 contribuciones</title></rect>
-<rect class="b" style="animation-delay:420ms" x="496.1" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
-<rect class="b" style="animation-delay:434ms" x="511.7" y="224.2" width="12.6" height="3.8" rx="2.5" fill="url(#gv)"><title>2 contribuciones</title></rect>
-<rect class="b" style="animation-delay:448ms" x="527.3" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
-<rect class="b" style="animation-delay:462ms" x="542.9" y="178.3" width="12.6" height="49.7" rx="2.5" fill="url(#gv)"><title>26 contribuciones</title></rect>
-<rect class="b" style="animation-delay:476ms" x="558.5" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
-<rect class="b" style="animation-delay:490ms" x="574.1" y="184.0" width="12.6" height="44.0" rx="2.5" fill="url(#gv)"><title>23 contribuciones</title></rect>
-<rect class="b" style="animation-delay:504ms" x="589.7" y="180.2" width="12.6" height="47.8" rx="2.5" fill="url(#gv)"><title>25 contribuciones</title></rect>
-<rect class="b" style="animation-delay:518ms" x="605.3" y="140.0" width="12.6" height="88.0" rx="2.5" fill="url(#gv)"><title>46 contribuciones</title></rect>
-<rect class="b" style="animation-delay:532ms" x="620.9" y="178.3" width="12.6" height="49.7" rx="2.5" fill="url(#gv)"><title>26 contribuciones</title></rect>
-<rect class="b" style="animation-delay:546ms" x="636.5" y="207.0" width="12.6" height="21.0" rx="2.5" fill="url(#gv)"><title>11 contribuciones</title></rect>
-<rect class="b" style="animation-delay:560ms" x="652.2" y="201.2" width="12.6" height="26.8" rx="2.5" fill="url(#gv)"><title>14 contribuciones</title></rect>
-<rect class="b" style="animation-delay:574ms" x="667.8" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
-<rect class="b" style="animation-delay:588ms" x="683.4" y="191.7" width="12.6" height="36.3" rx="2.5" fill="url(#gv)"><title>19 contribuciones</title></rect>
-<rect class="b" style="animation-delay:602ms" x="699.0" y="208.9" width="12.6" height="19.1" rx="2.5" fill="url(#gv)"><title>10 contribuciones</title></rect>
-<rect class="b" style="animation-delay:616ms" x="714.6" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
-<rect class="b" style="animation-delay:630ms" x="730.2" y="212.7" width="12.6" height="15.3" rx="2.5" fill="url(#gv)"><title>8 contribuciones</title></rect>
-<rect class="b" style="animation-delay:644ms" x="745.8" y="207.0" width="12.6" height="21.0" rx="2.5" fill="url(#gv)"><title>11 contribuciones</title></rect>
-<rect class="b" style="animation-delay:658ms" x="761.4" y="189.7" width="12.6" height="38.3" rx="2.5" fill="url(#gv)"><title>20 contribuciones</title></rect>
-<rect class="b" style="animation-delay:672ms" x="777.0" y="201.2" width="12.6" height="26.8" rx="2.5" fill="url(#gv)"><title>14 contribuciones</title></rect>
-<rect class="b" style="animation-delay:686ms" x="792.6" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
-<rect class="b" style="animation-delay:700ms" x="808.2" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
-<rect class="b" style="animation-delay:714ms" x="823.8" y="143.8" width="12.6" height="84.2" rx="2.5" fill="url(#gv)"><title>44 contribuciones</title></rect>
-<rect class="b" style="animation-delay:728ms" x="839.4" y="193.6" width="12.6" height="34.4" rx="2.5" fill="url(#gv)"><title>18 contribuciones</title></rect>
-<text class="m" x="90.4" y="248">nov</text>
-<text class="m" x="168.4" y="248">dic</text>
-<text class="m" x="230.8" y="248">ene</text>
-<text class="m" x="293.3" y="248">feb</text>
-<text class="m" x="355.7" y="248">mar</text>
-<text class="m" x="433.7" y="248">abr</text>
-<text class="m" x="496.1" y="248">may</text>
-<text class="m" x="574.1" y="248">jun</text>
-<text class="m" x="636.5" y="248">jul</text>
-<text class="m" x="699.0" y="248">ago</text>
-<text class="m" x="777.0" y="248">sep</text>
+<rect class="b" style="animation-delay:392ms" x="464.9" y="220.3" width="12.6" height="7.7" rx="2.5" fill="url(#gv)"><title>4 contribuciones</title></rect>
+<rect class="b" style="animation-delay:406ms" x="480.5" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
+<rect class="b" style="animation-delay:420ms" x="496.1" y="224.2" width="12.6" height="3.8" rx="2.5" fill="url(#gv)"><title>2 contribuciones</title></rect>
+<rect class="b" style="animation-delay:434ms" x="511.7" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
+<rect class="b" style="animation-delay:448ms" x="527.3" y="178.3" width="12.6" height="49.7" rx="2.5" fill="url(#gv)"><title>26 contribuciones</title></rect>
+<rect class="b" style="animation-delay:462ms" x="542.9" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
+<rect class="b" style="animation-delay:476ms" x="558.5" y="184.0" width="12.6" height="44.0" rx="2.5" fill="url(#gv)"><title>23 contribuciones</title></rect>
+<rect class="b" style="animation-delay:490ms" x="574.1" y="180.2" width="12.6" height="47.8" rx="2.5" fill="url(#gv)"><title>25 contribuciones</title></rect>
+<rect class="b" style="animation-delay:504ms" x="589.7" y="140.0" width="12.6" height="88.0" rx="2.5" fill="url(#gv)"><title>46 contribuciones</title></rect>
+<rect class="b" style="animation-delay:518ms" x="605.3" y="178.3" width="12.6" height="49.7" rx="2.5" fill="url(#gv)"><title>26 contribuciones</title></rect>
+<rect class="b" style="animation-delay:532ms" x="620.9" y="207.0" width="12.6" height="21.0" rx="2.5" fill="url(#gv)"><title>11 contribuciones</title></rect>
+<rect class="b" style="animation-delay:546ms" x="636.5" y="201.2" width="12.6" height="26.8" rx="2.5" fill="url(#gv)"><title>14 contribuciones</title></rect>
+<rect class="b" style="animation-delay:560ms" x="652.2" y="225.0" width="12.6" height="3.0" rx="2.5" fill="url(#gv)"><title>1 contribuciones</title></rect>
+<rect class="b" style="animation-delay:574ms" x="667.8" y="191.7" width="12.6" height="36.3" rx="2.5" fill="url(#gv)"><title>19 contribuciones</title></rect>
+<rect class="b" style="animation-delay:588ms" x="683.4" y="208.9" width="12.6" height="19.1" rx="2.5" fill="url(#gv)"><title>10 contribuciones</title></rect>
+<rect class="b" style="animation-delay:602ms" x="699.0" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
+<rect class="b" style="animation-delay:616ms" x="714.6" y="212.7" width="12.6" height="15.3" rx="2.5" fill="url(#gv)"><title>8 contribuciones</title></rect>
+<rect class="b" style="animation-delay:630ms" x="730.2" y="207.0" width="12.6" height="21.0" rx="2.5" fill="url(#gv)"><title>11 contribuciones</title></rect>
+<rect class="b" style="animation-delay:644ms" x="745.8" y="189.7" width="12.6" height="38.3" rx="2.5" fill="url(#gv)"><title>20 contribuciones</title></rect>
+<rect class="b" style="animation-delay:658ms" x="761.4" y="201.2" width="12.6" height="26.8" rx="2.5" fill="url(#gv)"><title>14 contribuciones</title></rect>
+<rect class="b" style="animation-delay:672ms" x="777.0" y="218.4" width="12.6" height="9.6" rx="2.5" fill="url(#gv)"><title>5 contribuciones</title></rect>
+<rect class="b" style="animation-delay:686ms" x="792.6" y="187.8" width="12.6" height="40.2" rx="2.5" fill="url(#gv)"><title>21 contribuciones</title></rect>
+<rect class="b" style="animation-delay:700ms" x="808.2" y="143.8" width="12.6" height="84.2" rx="2.5" fill="url(#gv)"><title>44 contribuciones</title></rect>
+<rect class="b" style="animation-delay:714ms" x="823.8" y="193.6" width="12.6" height="34.4" rx="2.5" fill="url(#gv)"><title>18 contribuciones</title></rect>
+<rect class="b" style="animation-delay:728ms" x="839.4" y="225.0" width="12.6" height="3.0" rx="2.5" fill="#21262d"><title>0 contribuciones</title></rect>
+<text class="m" x="74.8" y="248">nov</text>
+<text class="m" x="152.8" y="248">dic</text>
+<text class="m" x="215.2" y="248">ene</text>
+<text class="m" x="277.7" y="248">feb</text>
+<text class="m" x="340.1" y="248">mar</text>
+<text class="m" x="418.1" y="248">abr</text>
+<text class="m" x="480.5" y="248">may</text>
+<text class="m" x="558.5" y="248">jun</text>
+<text class="m" x="620.9" y="248">jul</text>
+<text class="m" x="683.4" y="248">ago</text>
+<text class="m" x="761.4" y="248">sep</text>
 </svg>
