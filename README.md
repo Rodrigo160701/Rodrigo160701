@@ -111,7 +111,7 @@ Cuadros de mando de ventas y marketing que se usan a diario: lógica de negocio 
 ## 📂 Proyectos públicos y de formación
 
 <table>
-<tr><td width="50%" valign="top"><a href="https://github.com/thomas-more-devops/taskflow-group-3-IADI3"><b>taskflow-group-3-IADI3</b></a><br/><sub>TaskFlow · proyecto de DevOps en equipo: flujo Git con ramas, pull requests, issues y revisión de código.</sub><br/><br/><img src="https://img.shields.io/badge/-JavaScript-f1e05a?style=flat-square" alt="JavaScript"/> <sub>actualizado 10 oct 2026</sub></td><td width="50%" valign="top"><a href="https://github.com/Rodrigo160701/f1-portfolio"><b>f1-portfolio</b></a> · <a href="https://rodrigo160701.github.io/f1-portfolio/">🌐 demo</a><br/><sub>F1 Fantasy League · app de escritorio en C#/WPF + MySQL con datos reales de la F1 (OpenF1 API): fichajes, ligas privadas y predicciones. Proyecto en equipo.</sub><br/><br/><img src="https://img.shields.io/badge/-HTML-e34c26?style=flat-square" alt="HTML"/> <sub>actualizado 4 abr 2026</sub></td></tr>
+<tr><td width="50%" valign="top"><a href="https://github.com/thomas-more-devops/taskflow-group-3-IADI3"><b>taskflow-group-3-IADI3</b></a><br/><sub>TaskFlow · proyecto de DevOps en equipo: flujo Git con ramas, pull requests, issues y revisión de código.</sub><br/><br/><img src="https://img.shields.io/badge/-JavaScript-f1e05a?style=flat-square" alt="JavaScript"/> <sub>actualizado 13 oct 2026</sub></td><td width="50%" valign="top"><a href="https://github.com/Rodrigo160701/f1-portfolio"><b>f1-portfolio</b></a> · <a href="https://rodrigo160701.github.io/f1-portfolio/">🌐 demo</a><br/><sub>F1 Fantasy League · app de escritorio en C#/WPF + MySQL con datos reales de la F1 (OpenF1 API): fichajes, ligas privadas y predicciones. Proyecto en equipo.</sub><br/><br/><img src="https://img.shields.io/badge/-HTML-e34c26?style=flat-square" alt="HTML"/> <sub>actualizado 4 abr 2026</sub></td></tr>
 </table>
 <!-- PROJECTS:END -->
 
@@ -130,11 +130,11 @@ Cuadros de mando de ventas y marketing que se usan a diario: lógica de negocio 
 <!-- RECENT:START -->
 ### ⚡ Lo último
 
+- 👀 Revisada la PR [#12](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/12) en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 13 oct 2026</sub>
 - ⬆️ Commits en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 10 oct 2026</sub>
 - ⬆️ Commits en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 8 oct 2026</sub>
 - 👀 Revisada la PR [#10](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/10) en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 8 oct 2026</sub>
 - 👀 Revisada la PR [#9](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/9) en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 8 oct 2026</sub>
-- ⬆️ Commits en [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3) <sub>· 3 oct 2026</sub>
 <!-- RECENT:END -->
 
 ---
