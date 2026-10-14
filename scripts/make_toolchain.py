@@ -13,6 +13,11 @@ Icons: se dibuja un glifo propio de barras (POWERBI_GLYPH). Las marcas
 pertenecen a sus respectivos propietarios.
 
 Para cambiar el contenido, edita ROWS y vuelve a ejecutar:  python scripts/make_toolchain.py
+
+scripts/make_cards.py importa este módulo (THEMES, LAYOUTS, columnas y geometría:
+wide_columns, stack_columns, wide_geometry, stack_geometry; piezas de dibujo: layer_head, cable,
+box, tile_svg, row_svg, frame) para las tarjetas "Lo que hago" y "Sobre mí"; si cambias el
+estilo o la rejilla aquí, vuelve a ejecutar también make_cards.py.
 """
 
 import json
@@ -97,7 +102,8 @@ def icon_path(slug: str) -> str:
     return POWERBI_GLYPH if slug == "powerbi" else ICONS[slug]["path"]
 
 
-def style(t: dict, L: dict) -> str:
+def style(t: dict, L: dict, extra: tuple = ()) -> str:
+    """Hoja de estilos común. extra: reglas adicionales (las usa make_cards.py)."""
     return "\n".join([
         "<style>",
         f"text{{font-family:{SANS}}}",
@@ -107,6 +113,7 @@ def style(t: dict, L: dict) -> str:
         f".rt{{font-size:{L['row_fs']}px;font-weight:700;letter-spacing:.8px}}",
         f".rs{{font-size:{L['sub_fs']}px;fill:{t['muted']}}}",
         f".lb{{font-size:{L['label_fs']}px;fill:{t['text']}}}",
+        *extra,
         f".tile{{fill:{t['panel']};stroke:{t['border']}}}",
         f".port{{fill:{t['bg']};stroke-width:1.2}}",
         ".row{animation:rin .7s cubic-bezier(.2,.8,.2,1) both}",
@@ -120,10 +127,23 @@ def style(t: dict, L: dict) -> str:
     ])
 
 
+def wide_columns(L: dict) -> tuple:
+    """Escritorio: inicio y fin del cable y ancho de cada una de las 5 columnas de baldosas
+    (la columna j está centrada en slots_x0 + slot * (j + .5))."""
+    x0, x1 = L["cable_x0"], L["W"] - L["pad"]
+    return x0, x1, (x1 - L["slots_x0"]) / 5
+
+
+def stack_columns(L: dict) -> tuple:
+    """Móvil: inicio del cable, eje vertical de la U y ancho de cada una de las 3 columnas
+    (la columna j está centrada en x0 + slot * (j + .5))."""
+    x0, xu = L["txt_x"], L["W"] - L["pad"] - 4
+    return x0, xu, (xu - 12 - x0) / 3
+
+
 def wide_geometry(L: dict, top: float) -> dict:
     """Una línea: el cable va de izquierda a derecha por los 5 nodos."""
-    x0, x1 = L["cable_x0"], L["W"] - L["pad"]
-    slot = (x1 - L["slots_x0"]) / 5
+    x0, x1, slot = wide_columns(L)
     cy = top + L["tile"] / 2
     nodes = []
     for j in range(5):
@@ -131,14 +151,13 @@ def wide_geometry(L: dict, top: float) -> dict:
         nodes.append(dict(cx=cx, cy=cy, top=top, arrive=cx - L["tile"] / 2 - x0))
     return dict(nodes=nodes, path=f"M{f(x0)},{f(cy)}H{f(x1)}", length=x1 - x0,
                 start=(x0, cy), end=(x1 - 3, cy), bottom=top + L["tile"] + L["label_gap"],
-                head_cy=cy)
+                head_cy=cy, bar=(top + 2, L["tile"] - 4))
 
 
 def stack_geometry(L: dict, top: float) -> dict:
     """3 + 2: el cable cruza 3 nodos, gira en U por la derecha y vuelve por 2 nodos intercalados."""
-    W, pad, tile, r = L["W"], L["pad"], L["tile"], L["turn_r"]
-    x0, xu = L["txt_x"], W - pad - 4                  # inicio del cable y eje vertical de la U
-    slot = (xu - 12 - x0) / 3
+    tile, r = L["tile"], L["turn_r"]
+    x0, xu, slot = stack_columns(L)                   # inicio del cable y eje vertical de la U
     a_top = top + L["head_h"]
     b_top = a_top + tile + L["row2_gap"]
     a_cy, b_cy = a_top + tile / 2, b_top + tile / 2
@@ -154,87 +173,125 @@ def stack_geometry(L: dict, top: float) -> dict:
             f"V{f(b_cy - r)}A{r},{r} 0 0 1 {f(xu - r)},{f(b_cy)}H{f(xe)}")
     return dict(nodes=nodes, path=path, length=run1 + turn + (xu - r) - xe,
                 start=(x0, a_cy), end=(xe + 3, b_cy), bottom=b_top + tile + L["label_gap"],
-                head_cy=top + 11)
+                head_cy=top + 11, bar=(top, b_top + tile - top))
 
 
-def row_svg(t: dict, L: dict, mode: str, row: dict, i: int, g: dict, top: float) -> str:
+# --- Piezas de dibujo (las reutiliza make_cards.py para las tarjetas "work" y "about") ---
+
+def brand_glyph(slug: str, x: float, y: float, size: float, ink: str) -> str:
+    """Icono de marca de relleno (Simple Icons o el glifo de Power BI) en una caja size x size."""
+    return (f'<svg x="{f(x)}" y="{f(y)}" width="{f(size)}" height="{f(size)}" viewBox="0 0 24 24">'
+            f'<path fill="{ink}" fill-rule="evenodd" d="{icon_path(slug)}"/></svg>')
+
+
+def layer_head(t: dict, L: dict, mode: str, row: dict, g: dict) -> list:
+    """Barra de acento y cabecera de la capa: '01 / NOMBRE' en el color de la capa + subtítulo."""
     hue, ink = t["hue"][row["hue"]], t["ink"][row["hue"]]
-    pad, tile, icon = L["pad"], L["tile"], L["icon"]
-    delay = PULSE_START + i * PULSE_STEP
+    pad = L["pad"]
     title = f'{row["n"]} / {escape(row["name"])}'
-    s = [f'<g class="row" style="animation-delay:{i * FADE_STEP}ms">']
-
-    # Barra de acento y cabecera de la capa.
+    by, bh = g["bar"]
+    s = [f'<rect x="{pad}" y="{f(by)}" width="3" height="{f(bh)}" rx="1.5" fill="{hue}"/>']
     if mode == "wide":
         cy = g["head_cy"]
-        s.append(f'<rect x="{pad}" y="{f(top + 2)}" width="3" height="{tile - 4}" rx="1.5" fill="{hue}"/>')
         s.append(f'<text class="mono rt" x="{L["txt_x"]}" y="{f(cy - 5)}" fill="{ink}">{title}</text>')
         s.append(f'<text class="rs" x="{L["txt_x"]}" y="{f(cy + 15)}">{escape(row["sub"])}</text>')
     else:
-        last = g["nodes"][-1]
-        s.append(f'<rect x="{pad}" y="{f(top)}" width="3" height="{f(last["top"] + tile - top)}" rx="1.5" '
-                 f'fill="{hue}"/>')
         s.append(f'<text class="mono rt" x="{L["txt_x"]}" y="{f(g["head_cy"])}" fill="{ink}">{title}</text>')
         s.append(f'<text class="rs" x="{L["W"] - pad}" y="{f(g["head_cy"])}" text-anchor="end">'
                  f'{escape(row["sub"])}</text>')
+    return s
 
-    # Cable con nodo de entrada (relleno) y de salida (hueco). El pulso pasa por detrás de los nodos.
+
+def frac(v: float) -> str:
+    """Fracción de 0 a 1 para keyTimes/keyPoints: '.481', '1', '0'."""
+    s = f"{v:.3f}".rstrip("0").rstrip(".")
+    return s[1:] if s.startswith("0.") else s
+
+
+def cable(t: dict, g: dict, hue: str, delay: float, travel: float = 1.0) -> list:
+    """Cable con nodo de entrada (relleno) y de salida (hueco) y el punto de datos que lo recorre.
+    Se dibuja antes que las baldosas: el pulso pasa por detrás de los nodos.
+    travel < 1 (cable más corto que el de referencia, lo usa make_cards.py): el punto recorre el
+    cable en esa fracción de PULSE_DUR y queda oculto el resto, así va a la misma velocidad que en
+    las demás capas y conserva el mismo periodo (el desfase entre capas no se rompe)."""
     (sx, sy), (ex, ey) = g["start"], g["end"]
-    s.append(f'<path d="{g["path"]}" fill="none" stroke="{hue}" stroke-opacity="{t["cable"]}" '
-             f'stroke-width="1.25"/>')
-    s.append(f'<circle cx="{f(sx)}" cy="{f(sy)}" r="3.5" fill="{hue}"/>')
-    s.append(f'<circle class="port" cx="{f(ex)}" cy="{f(ey)}" r="3" stroke="{hue}"/>')
-    # opacity="0" de base: si SMIL no corre, el punto (sin cx/cy, lo coloca animateMotion) no se ve.
-    s.append(f'<g class="pulse" opacity="0">'
-             f'<circle r="7" fill="{hue}" fill-opacity="{t["halo"]}"/><circle r="3" fill="{hue}"/>'
-             f'<animateMotion path="{g["path"]}" dur="{PULSE_DUR}s" begin="{delay:.2f}s" '
-             f'repeatCount="indefinite" calcMode="paced"/>'
-             f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.04;.96;1" '
-             f'dur="{PULSE_DUR}s" begin="{delay:.2f}s" repeatCount="indefinite"/></g>')
+    if travel < 1:
+        k = frac(travel)
+        motion = f'calcMode="linear" keyPoints="0;1;1" keyTimes="0;{k};1"'
+        fade = f'values="0;1;1;0;0" keyTimes="0;.04;{frac(travel - .04)};{k};1"'
+    else:
+        motion, fade = 'calcMode="paced"', 'values="0;1;1;0" keyTimes="0;.04;.96;1"'
+    return [
+        f'<path d="{g["path"]}" fill="none" stroke="{hue}" stroke-opacity="{t["cable"]}" stroke-width="1.25"/>',
+        f'<circle cx="{f(sx)}" cy="{f(sy)}" r="3.5" fill="{hue}"/>',
+        f'<circle class="port" cx="{f(ex)}" cy="{f(ey)}" r="3" stroke="{hue}"/>',
+        # opacity="0" de base: si SMIL no corre, el punto (sin cx/cy, lo coloca animateMotion) no se ve.
+        f'<g class="pulse" opacity="0">'
+        f'<circle r="7" fill="{hue}" fill-opacity="{t["halo"]}"/><circle r="3" fill="{hue}"/>'
+        f'<animateMotion path="{g["path"]}" dur="{PULSE_DUR}s" begin="{delay:.2f}s" '
+        f'repeatCount="indefinite" {motion}/>'
+        f'<animate attributeName="opacity" {fade} '
+        f'dur="{PULSE_DUR}s" begin="{delay:.2f}s" repeatCount="indefinite"/></g>',
+    ]
 
-    for (slug, label), n in zip(row["tools"], g["nodes"]):
-        cx, cy, ty = n["cx"], n["cy"], n["top"]
-        tx = cx - tile / 2
-        arrive = delay + n["arrive"] / g["length"] * PULSE_DUR
-        s.append(f'<rect class="tile" x="{f(tx)}" y="{f(ty)}" width="{tile}" height="{tile}" rx="12"/>')
-        s.append(f'<rect class="ping" x="{f(tx)}" y="{f(ty)}" width="{tile}" height="{tile}" rx="12" '
-                 f'stroke="{hue}" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" '
-                 f'keyTimes="0;.03;.2;1" dur="{PULSE_DUR}s" begin="{arrive:.2f}s" '
-                 f'repeatCount="indefinite"/></rect>')
-        for px in (tx, tx + tile):
-            s.append(f'<circle class="port" cx="{f(px)}" cy="{f(cy)}" r="2.5" stroke="{hue}"/>')
-        s.append(f'<svg x="{f(cx - icon / 2)}" y="{f(cy - icon / 2)}" width="{icon}" height="{icon}" '
-                 f'viewBox="0 0 24 24"><path fill="{ink}" fill-rule="evenodd" d="{icon_path(slug)}"/></svg>')
-        s.append(f'<text class="mono lb" x="{f(cx)}" y="{f(ty + tile + L["label_gap"])}" '
+
+def box(hue: str, x: float, y: float, w: float, h: float, cy: float, arrive: float) -> list:
+    """Baldosa (o panel) con borde, destello al paso del pulso y puertos laterales a la altura cy."""
+    s = [f'<rect class="tile" x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(h)}" rx="12"/>',
+         f'<rect class="ping" x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(h)}" rx="12" '
+         f'stroke="{hue}" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" '
+         f'keyTimes="0;.03;.2;1" dur="{PULSE_DUR}s" begin="{arrive:.2f}s" '
+         f'repeatCount="indefinite"/></rect>']
+    for px in (x, x + w):
+        s.append(f'<circle class="port" cx="{f(px)}" cy="{f(cy)}" r="2.5" stroke="{hue}"/>')
+    return s
+
+
+def tile_svg(L: dict, hue: str, ink: str, n: dict, slug: str, label, arrive: float,
+             glyph=brand_glyph) -> list:
+    """Baldosa cuadrada con icono monocromo centrado y, si hay label, etiqueta mono debajo
+    (centrada en n["lx"] si existe; make_cards.py la usa para separar etiquetas largas vecinas)."""
+    tile, icon = L["tile"], L["icon"]
+    cx, cy, ty = n["cx"], n["cy"], n["top"]
+    s = box(hue, cx - tile / 2, ty, tile, tile, cy, arrive)
+    s.append(glyph(slug, cx - icon / 2, cy - icon / 2, icon, ink))
+    if label:
+        s.append(f'<text class="mono lb" x="{f(n.get("lx", cx))}" y="{f(ty + tile + L["label_gap"])}" '
                  f'text-anchor="middle">{escape(label)}</text>')
+    return s
+
+
+def row_svg(t: dict, L: dict, mode: str, row: dict, i: int, g: dict, glyph=brand_glyph) -> str:
+    hue, ink = t["hue"][row["hue"]], t["ink"][row["hue"]]
+    delay = PULSE_START + i * PULSE_STEP
+    s = [f'<g class="row" style="animation-delay:{i * FADE_STEP}ms">']
+    s += layer_head(t, L, mode, row, g)
+    s += cable(t, g, hue, delay)
+    for (slug, label), n in zip(row["tools"], g["nodes"]):
+        arrive = delay + n["arrive"] / g["length"] * PULSE_DUR
+        s += tile_svg(L, hue, ink, n, slug, label, arrive, glyph)
     s.append("</g>")
     return "\n".join(s)
 
 
-def card(theme: str, mode: str) -> str:
-    t, L = THEMES[theme], LAYOUTS[mode]
+def frame(t: dict, L: dict, *, uid: str, title: str, heading: str, tagline: str, desc: str,
+          body: list, bus: list, H: int, extra_style: tuple = ()) -> str:
+    """Marco común: fondo, cabecera (título + tagline + regla), bus punteado y capas.
+    Si L trae tag_y, la tagline va bajo el título (alineada a la izquierda) en vez de a la derecha."""
     W, pad = L["W"], L["pad"]
-    geometry = wide_geometry if mode == "wide" else stack_geometry
-    body, top, bus = [], L["top0"], []
-    for i, row in enumerate(ROWS):
-        g = geometry(L, top)
-        body.append(row_svg(t, L, mode, row, i, g, top))
-        bus.append(top)
-        bottom = g["bottom"]                  # línea base de las últimas etiquetas de la capa
-        top = bottom + L["gap"]
-    H = int(round(bottom + 4 + L["bottom"]))
-
-    desc = "; ".join(f'{r["plain"]} ({r["sub"].lower()}): ' + ", ".join(lbl for _, lbl in r["tools"])
-                     for r in ROWS)
+    if L.get("tag_y"):
+        tag = f'<text class="mono tg" x="{pad}" y="{L["tag_y"]}">{escape(tagline)}</text>'
+    else:
+        tag = f'<text class="mono tg" x="{W - pad}" y="{L["head_y"]}" text-anchor="end">{escape(tagline)}</text>'
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
-        f'role="img" aria-labelledby="tc-title tc-desc">',
-        f'<title id="tc-title">{escape(TITLE)}: herramientas por capas</title>',
-        f'<desc id="tc-desc">{escape(desc)}.</desc>',
-        style(t, L),
+        f'role="img" aria-labelledby="{uid}-title {uid}-desc">',
+        f'<title id="{uid}-title">{escape(title)}</title>',
+        f'<desc id="{uid}-desc">{escape(desc)}</desc>',
+        style(t, L, extra_style),
         f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="{t["bg"]}" stroke="{t["border"]}"/>',
-        f'<text class="tt" x="{pad}" y="{L["head_y"]}">{escape(TITLE)}</text>',
-        f'<text class="mono tg" x="{W - pad}" y="{L["head_y"]}" text-anchor="end">{escape(TAGLINE)}</text>',
+        f'<text class="tt" x="{pad}" y="{L["head_y"]}">{escape(heading)}</text>',
+        tag,
         f'<line x1="{pad}" y1="{L["rule_y"] + .5}" x2="{W - pad}" y2="{L["rule_y"] + .5}" stroke="{t["border"]}"/>',
         # "Bus" punteado que une las cuatro capas por detrás de las barras de acento.
         f'<line x1="{pad + 1.5}" y1="{f(bus[0] + 2)}" x2="{pad + 1.5}" y2="{f(bus[-1] + 20)}" '
@@ -243,6 +300,24 @@ def card(theme: str, mode: str) -> str:
         "</svg>",
     ]
     return "\n".join(out) + "\n"
+
+
+def card(theme: str, mode: str) -> str:
+    t, L = THEMES[theme], LAYOUTS[mode]
+    geometry = wide_geometry if mode == "wide" else stack_geometry
+    body, top, bus = [], L["top0"], []
+    for i, row in enumerate(ROWS):
+        g = geometry(L, top)
+        body.append(row_svg(t, L, mode, row, i, g))
+        bus.append(top)
+        bottom = g["bottom"]                  # línea base de las últimas etiquetas de la capa
+        top = bottom + L["gap"]
+    H = int(round(bottom + 4 + L["bottom"]))
+
+    desc = "; ".join(f'{r["plain"]} ({r["sub"].lower()}): ' + ", ".join(lbl for _, lbl in r["tools"])
+                     for r in ROWS)
+    return frame(t, L, uid="tc", title=f"{TITLE}: herramientas por capas", heading=TITLE, tagline=TAGLINE,
+                 desc=f"{desc}.", body=body, bus=bus, H=H)
 
 
 if __name__ == "__main__":

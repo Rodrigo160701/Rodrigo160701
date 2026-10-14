@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="758" viewBox="0 0 480 758" role="img" aria-labelledby="about-title about-desc">
+<title id="about-title">Sobre mí: datos, automatización e IA</title>
+<desc id="about-desc">Ahora, en el trabajo: proyectos grandes a medida para una empresa europea, y automatizando todo lo que se repite. Estudios en Thomas More, Bélgica: Bachelor International Business Management – Data Science, Protection &amp; Security; Data Science, ML y Forecasting, DevOps y Data as a Service. Intereses: análisis de datos, agentes de IA, automatización, calidad del dato y forecasting. Privado, código de empresa: la mayor parte de mi trabajo vive en repos privados de empresa; aquí cuento qué hago, sin enseñar código ni datos.</desc>
+<style>
+text{font-family:-apple-system,'Segoe UI',Ubuntu,sans-serif}
+.mono{font-family:'Cascadia Code',Consolas,'Liberation Mono',monospace}
+.tt{font-size:17px;font-weight:700;fill:#e6edf3;letter-spacing:-.2px}
+.tg{font-size:12.5px;fill:#8b949e}
+.rt{font-size:14px;font-weight:700;letter-spacing:.8px}
+.rs{font-size:14px;fill:#8b949e}
+.lb{font-size:14px;fill:#e6edf3}
+.bd{font-size:13px;fill:#e6edf3}
+.nt{font-size:12.5px;fill:#8b949e}
+.tile{fill:#161b22;stroke:#30363d}
+.port{fill:#0d1117;stroke-width:1.2}
+.row{animation:rin .7s cubic-bezier(.2,.8,.2,1) both}
+.ping{fill:none;stroke-width:1.5}
+@keyframes rin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.row{animation:none}.pulse,.ping{display:none}}
+</style>
+<rect x=".5" y=".5" width="479" height="757" rx="14" fill="#0d1117" stroke="#30363d"/>
+<text class="tt" x="20" y="38">Sobre mí</text>
+<text class="mono tg" x="460" y="38" text-anchor="end">datos · automatización · IA</text>
+<line x1="20" y1="56.5" x2="460" y2="56.5" stroke="#30363d"/>
+<line x1="21.5" y1="78" x2="21.5" y2="634" stroke="#30363d" stroke-dasharray="2 4"/>
+<g class="row" style="animation-delay:0ms">
+<rect x="20" y="76" width="3" height="101" rx="1.5" fill="#a78bfa"/>
+<text class="mono rt" x="32" y="87" fill="#a78bfa">01 / AHORA</text>
+<text class="rs" x="460" y="87" text-anchor="end">En el trabajo</text>
+<path d="M32,140.5H460" fill="none" stroke="#a78bfa" stroke-opacity=".45" stroke-width="1.25"/>
+<circle cx="32" cy="140.5" r="3.5" fill="#a78bfa"/>
+<circle class="port" cx="457" cy="140.5" r="3" stroke="#a78bfa"/>
+<g class="pulse" opacity="0"><circle r="7" fill="#a78bfa" fill-opacity=".28"/><circle r="3" fill="#a78bfa"/><animateMotion path="M32,140.5H460" dur="4.4s" begin="1.20s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.479;1"/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.439;.479;1" dur="4.4s" begin="1.20s" repeatCount="indefinite"/></g>
+<rect class="tile" x="74.7" y="114.5" width="52" height="52" rx="12"/>
+<rect class="ping" x="74.7" y="114.5" width="52" height="52" rx="12" stroke="#a78bfa" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="1.41s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="74.7" cy="140.5" r="2.5" stroke="#a78bfa"/>
+<circle class="port" cx="126.7" cy="140.5" r="2.5" stroke="#a78bfa"/>
+<svg x="83.2" y="123" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></g></svg>
+<rect class="tile" x="154.7" y="104" width="277.3" height="73" rx="12"/>
+<rect class="ping" x="154.7" y="104" width="277.3" height="73" rx="12" stroke="#a78bfa" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="1.80s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="154.7" cy="140.5" r="2.5" stroke="#a78bfa"/>
+<circle class="port" cx="432" cy="140.5" r="2.5" stroke="#a78bfa"/>
+<text class="bd"><tspan x="168.7" y="126.5">Proyectos grandes a medida para</tspan><tspan x="168.7" y="145.5">una empresa europea, y</tspan><tspan x="168.7" y="164.5">automatizando todo lo que se repite.</tspan></text>
+</g>
+<g class="row" style="animation-delay:140ms">
+<rect x="20" y="221" width="3" height="139" rx="1.5" fill="#22d3ee"/>
+<text class="mono rt" x="32" y="232" fill="#22d3ee">02 / ESTUDIOS</text>
+<text class="rs" x="460" y="232" text-anchor="end">Thomas More · Bélgica</text>
+<path d="M32,304.5H460" fill="none" stroke="#22d3ee" stroke-opacity=".45" stroke-width="1.25"/>
+<circle cx="32" cy="304.5" r="3.5" fill="#22d3ee"/>
+<circle class="port" cx="457" cy="304.5" r="3" stroke="#22d3ee"/>
+<g class="pulse" opacity="0"><circle r="7" fill="#22d3ee" fill-opacity=".28"/><circle r="3" fill="#22d3ee"/><animateMotion path="M32,304.5H460" dur="4.4s" begin="2.30s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.479;1"/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.439;.479;1" dur="4.4s" begin="2.30s" repeatCount="indefinite"/></g>
+<rect class="tile" x="74.7" y="278.5" width="52" height="52" rx="12"/>
+<rect class="ping" x="74.7" y="278.5" width="52" height="52" rx="12" stroke="#22d3ee" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="2.51s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="74.7" cy="304.5" r="2.5" stroke="#22d3ee"/>
+<circle class="port" cx="126.7" cy="304.5" r="2.5" stroke="#22d3ee"/>
+<svg x="83.2" y="287" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g></svg>
+<rect class="tile" x="154.7" y="249" width="277.3" height="111" rx="12"/>
+<rect class="ping" x="154.7" y="249" width="277.3" height="111" rx="12" stroke="#22d3ee" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="2.90s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="154.7" cy="304.5" r="2.5" stroke="#22d3ee"/>
+<circle class="port" cx="432" cy="304.5" r="2.5" stroke="#22d3ee"/>
+<text class="bd"><tspan x="168.7" y="271.5">Bachelor International Business</tspan><tspan x="168.7" y="290.5">Management – Data Science,</tspan><tspan x="168.7" y="309.5">Protection &amp; Security</tspan><tspan x="168.7" y="328.5" class="nt">Data Science · ML &amp; Forecasting</tspan><tspan x="168.7" y="347.5" class="nt">DevOps · Data as a Service</tspan></text>
+</g>
+<g class="row" style="animation-delay:280ms">
+<rect x="20" y="404" width="3" height="166" rx="1.5" fill="#e879f9"/>
+<text class="mono rt" x="32" y="415" fill="#e879f9">03 / INTERESES</text>
+<text class="rs" x="460" y="415" text-anchor="end">Lo que me engancha</text>
+<path d="M32,458H442A14,14 0 0 1 456,472V530A14,14 0 0 1 442,544H60" fill="none" stroke="#e879f9" stroke-opacity=".45" stroke-width="1.25"/>
+<circle cx="32" cy="458" r="3.5" fill="#e879f9"/>
+<circle class="port" cx="63" cy="544" r="3" stroke="#e879f9"/>
+<g class="pulse" opacity="0"><circle r="7" fill="#e879f9" fill-opacity=".28"/><circle r="3" fill="#e879f9"/><animateMotion path="M32,458H442A14,14 0 0 1 456,472V530A14,14 0 0 1 442,544H60" dur="4.4s" begin="3.40s" repeatCount="indefinite" calcMode="paced"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.04;.96;1" dur="4.4s" begin="3.40s" repeatCount="indefinite"/></g>
+<rect class="tile" x="74.7" y="432" width="52" height="52" rx="12"/>
+<rect class="ping" x="74.7" y="432" width="52" height="52" rx="12" stroke="#e879f9" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="3.61s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="74.7" cy="458" r="2.5" stroke="#e879f9"/>
+<circle class="port" cx="126.7" cy="458" r="2.5" stroke="#e879f9"/>
+<svg x="83.2" y="440.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></g></svg>
+<text class="mono lb" x="100.7" y="504" text-anchor="middle">Análisis</text>
+<rect class="tile" x="212" y="432" width="52" height="52" rx="12"/>
+<rect class="ping" x="212" y="432" width="52" height="52" rx="12" stroke="#e879f9" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="4.29s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="212" cy="458" r="2.5" stroke="#e879f9"/>
+<circle class="port" cx="264" cy="458" r="2.5" stroke="#e879f9"/>
+<svg x="220.5" y="440.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></g></svg>
+<text class="mono lb" x="238" y="504" text-anchor="middle">Agentes IA</text>
+<rect class="tile" x="349.3" y="432" width="52" height="52" rx="12"/>
+<rect class="ping" x="349.3" y="432" width="52" height="52" rx="12" stroke="#e879f9" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="4.96s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="349.3" cy="458" r="2.5" stroke="#e879f9"/>
+<circle class="port" cx="401.3" cy="458" r="2.5" stroke="#e879f9"/>
+<svg x="357.9" y="440.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></g></svg>
+<text class="mono lb" x="375.3" y="504" text-anchor="middle">Automatización</text>
+<rect class="tile" x="143.3" y="518" width="52" height="52" rx="12"/>
+<rect class="ping" x="143.3" y="518" width="52" height="52" rx="12" stroke="#e879f9" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="7.13s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="143.3" cy="544" r="2.5" stroke="#e879f9"/>
+<circle class="port" cx="195.3" cy="544" r="2.5" stroke="#e879f9"/>
+<svg x="151.9" y="526.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></g></svg>
+<text class="mono lb" x="167.3" y="590" text-anchor="middle">Calidad del dato</text>
+<rect class="tile" x="280.7" y="518" width="52" height="52" rx="12"/>
+<rect class="ping" x="280.7" y="518" width="52" height="52" rx="12" stroke="#e879f9" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="6.46s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="280.7" cy="544" r="2.5" stroke="#e879f9"/>
+<circle class="port" cx="332.7" cy="544" r="2.5" stroke="#e879f9"/>
+<svg x="289.2" y="526.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#e879f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></g></svg>
+<text class="mono lb" x="308.7" y="590" text-anchor="middle">Forecasting</text>
+</g>
+<g class="row" style="animation-delay:420ms">
+<rect x="20" y="614" width="3" height="120" rx="1.5" fill="#34d399"/>
+<text class="mono rt" x="32" y="625" fill="#34d399">04 / PRIVADO</text>
+<text class="rs" x="460" y="625" text-anchor="end">Código de empresa</text>
+<path d="M32,688H460" fill="none" stroke="#34d399" stroke-opacity=".45" stroke-width="1.25"/>
+<circle cx="32" cy="688" r="3.5" fill="#34d399"/>
+<circle class="port" cx="457" cy="688" r="3" stroke="#34d399"/>
+<g class="pulse" opacity="0"><circle r="7" fill="#34d399" fill-opacity=".28"/><circle r="3" fill="#34d399"/><animateMotion path="M32,688H460" dur="4.4s" begin="4.50s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.479;1"/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.04;.439;.479;1" dur="4.4s" begin="4.50s" repeatCount="indefinite"/></g>
+<rect class="tile" x="74.7" y="662" width="52" height="52" rx="12"/>
+<rect class="ping" x="74.7" y="662" width="52" height="52" rx="12" stroke="#34d399" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="4.71s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="74.7" cy="688" r="2.5" stroke="#34d399"/>
+<circle class="port" cx="126.7" cy="688" r="2.5" stroke="#34d399"/>
+<svg x="83.2" y="670.5" width="34.9" height="34.9" viewBox="0 0 24 24"><g fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></g></svg>
+<rect class="tile" x="154.7" y="642" width="277.3" height="92" rx="12"/>
+<rect class="ping" x="154.7" y="642" width="277.3" height="92" rx="12" stroke="#34d399" opacity="0"><animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.03;.2;1" dur="4.4s" begin="5.10s" repeatCount="indefinite"/></rect>
+<circle class="port" cx="154.7" cy="688" r="2.5" stroke="#34d399"/>
+<circle class="port" cx="432" cy="688" r="2.5" stroke="#34d399"/>
+<text class="bd"><tspan x="168.7" y="664.5">La mayor parte de mi trabajo vive</tspan><tspan x="168.7" y="683.5">en repos privados de empresa.</tspan><tspan x="168.7" y="702.5" class="nt">Aquí cuento qué hago, sin enseñar</tspan><tspan x="168.7" y="721.5" class="nt">código ni datos.</tspan></text>
+</g>
+</svg>
