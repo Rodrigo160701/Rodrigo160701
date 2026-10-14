@@ -269,16 +269,16 @@ def projects_md(repos: list[dict]) -> str:
             meta.append(f'<img src="https://img.shields.io/badge/-{esc(lang["name"]).replace("-", "--").replace(" ", "%20")}'
                         f'-{(lang["color"] or "#8b949e").lstrip("#")}?style=flat-square" alt="{esc(lang["name"])}"/>')
         if r["stargazerCount"]:
-            meta.append(f"⭐ {r['stargazerCount']}")
+            meta.append(f"★ {r['stargazerCount']}")
         pushed = datetime.fromisoformat(r["pushedAt"].replace("Z", "+00:00")).date()
         meta.append(f"<sub>actualizado {fecha_es(pushed)}</sub>")
         links = f'<a href="{esc(r["url"])}"><b>{esc(r["nameWithOwner"].split("/")[1])}</b></a>'
         if r["homepageUrl"]:
-            links += f' · <a href="{esc(r["homepageUrl"])}">🌐 demo</a>'
+            links += f' · <a href="{esc(r["homepageUrl"])}">demo ↗</a>'
         desc = esc(r["description"] or "Sin descripción todavía.")
         cells.append(f'<td width="50%" valign="top">{links}<br/><sub>{desc}</sub><br/><br/>{" ".join(meta)}</td>')
 
-    rows = ["## 📂 Proyectos públicos y de formación", "", "<table>"]
+    rows = ["## 04 / Proyectos", "", "<table>"]
     for i in range(0, len(cells), 2):
         pair = cells[i:i + 2]
         if len(pair) == 1:
@@ -294,27 +294,27 @@ def describe_event(e: dict) -> str | None:
     p = e.get("payload", {})
     kind = e["type"]
     if kind == "PushEvent":
-        return f"⬆️ Commits en {link}"
+        return f"**COMMITS** / {link}"
     if kind == "CreateEvent" and p.get("ref_type") == "repository":
-        return f"✨ Nuevo repositorio {link}"
+        return f"**REPO NUEVO** / {link}"
     if kind == "PullRequestEvent":
         pr = p.get("pull_request", {})
         number = p.get("number") or pr.get("number")
         action = "merged" if p.get("action") == "closed" and pr.get("merged") else p.get("action")
         verb = {"opened": "Abierta", "merged": "Fusionada"}.get(action)
         if verb and number:
-            return f"🔀 {verb} la PR [#{number}](https://github.com/{repo}/pull/{number}) en {link}"
+            return f"**PR {verb.upper()}** [#{number}](https://github.com/{repo}/pull/{number}) / {link}"
         return None
     if kind == "PullRequestReviewEvent":
         number = p.get("pull_request", {}).get("number")
         if number:
-            return f"👀 Revisada la PR [#{number}](https://github.com/{repo}/pull/{number}) en {link}"
+            return f"**PR REVISADA** [#{number}](https://github.com/{repo}/pull/{number}) / {link}"
         return None
     if kind == "IssuesEvent" and p.get("action") == "opened":
         number = p.get("issue", {}).get("number")
-        return f"📝 Abierta la issue [#{number}](https://github.com/{repo}/issues/{number}) en {link}"
+        return f"**ISSUE ABIERTA** [#{number}](https://github.com/{repo}/issues/{number}) / {link}"
     if kind == "ReleaseEvent":
-        return f"🏷️ Publicada la versión {p.get('release', {}).get('tag_name', '')} de {link}"
+        return f"**VERSIÓN {p.get('release', {}).get('tag_name', '')}** / {link}"
     return None
 
 
@@ -329,12 +329,12 @@ def recent_md(events: list[dict], repos: list[dict]) -> str:
         if not text or key in seen:
             continue
         seen.add(key)
-        lines.append(f"- {text} <sub>· {fecha_es(date.fromisoformat(e['created_at'][:10]))}</sub>")
+        lines.append(f"- `{fecha_es(date.fromisoformat(e['created_at'][:10]))}` / {text}")
         if len(lines) == MAX_EVENTS:
             break
     if not lines:
         return ""
-    return "### ⚡ Lo último\n\n" + "\n".join(lines)
+    return "### Lo último\n\n" + "\n".join(lines)
 
 
 def replace_block(text: str, name: str, content: str) -> str:
