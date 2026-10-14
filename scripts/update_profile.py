@@ -2,6 +2,7 @@
 
 - assets/activity-{dark,light}.svg : tarjeta de actividad de los últimos 12 meses
 - README.md                       : proyectos destacados (PROJECTS) y actividad reciente (RECENT)
+- docs/contributions.json         : calendario de contribuciones (lo usan la animación y el juego del dino)
 
 Qué sale en el perfil (opt-in, nada más):
 - tus repos públicos con el topic "perfil"
@@ -29,6 +30,7 @@ TOKEN = os.environ.get("GITHUB_TOKEN", "")
 ROOT = Path(__file__).resolve().parent.parent
 README = ROOT / "README.md"
 ASSETS = ROOT / "assets"
+DOCS = ROOT / "docs"
 
 MAX_PROJECTS = 6
 MAX_EVENTS = 5
@@ -342,8 +344,30 @@ def replace_block(text: str, name: str, content: str) -> str:
     return pattern.sub(lambda m: f"{m.group(1)}\n{content}\n{m.group(3)}", text)
 
 
+def export_calendar(user: dict) -> None:
+    """Calendario de los últimos 12 meses en JSON: solo recuentos por día, sin nombres de repos."""
+    cal = user["contributionsCollection"]["contributionCalendar"]
+    weeks = [
+        {
+            "start": w["contributionDays"][0]["date"],
+            "days": [d["contributionCount"] for d in w["contributionDays"]],
+            "count": sum(d["contributionCount"] for d in w["contributionDays"]),
+        }
+        for w in cal["weeks"]
+    ]
+    data = {
+        "login": LOGIN,
+        "generated": datetime.now(timezone.utc).date().isoformat(),
+        "total": cal["totalContributions"],
+        "weeks": weeks,
+    }
+    DOCS.mkdir(exist_ok=True)
+    (DOCS / "contributions.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
+
+
 def main() -> None:
     user = fetch_profile()
+    export_calendar(user)
     ASSETS.mkdir(exist_ok=True)
     for theme in THEMES:
         (ASSETS / f"activity-{theme}.svg").write_text(activity_svg(user, theme), encoding="utf-8")

@@ -21,29 +21,25 @@ Soy **analista de datos y de automatizaciones**, y desarrollo software apoyándo
 
 ## 🛠️ Stack
 
-<p>
-  <img src="https://skillicons.dev/icons?i=py,sklearn,fastapi,flask,postgres,sqlite,mysql,docker,githubactions,git,cs,dotnet,cpp,java,html,css,js&perline=9" alt="Stack"/>
-</p>
+<picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/toolchain-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/toolchain-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/toolchain-dark.svg">
+  <img alt="Datos: Python, pandas, NumPy, scikit-learn, Jupyter. Automatización e IA: n8n, OpenAI, LangChain, Meta API, Slack. Backend y APIs: FastAPI, Flask, PostgreSQL, SQLite, Docker. Dashboards y flujo: Power BI, Streamlit, Plotly, Git, GitHub Actions." src="assets/toolchain-light.svg" width="100%">
+</picture>
 
-<p>
-  <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n"/>
-  <img src="https://img.shields.io/badge/Agentes%20IA%20%C2%B7%20RAG-8b5cf6?style=flat-square" alt="Agentes IA y RAG"/>
-  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas"/>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
-  <img src="https://img.shields.io/badge/Matplotlib%20%2F%20Seaborn-11557C?style=flat-square" alt="Matplotlib / Seaborn"/>
-  <img src="https://img.shields.io/badge/Power%20BI%20(DAX)-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI"/>
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly"/>
-  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy"/>
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/>
-  <img src="https://img.shields.io/badge/LLMs%20%2F%20OpenAI%20API-111111?style=flat-square" alt="LLMs"/>
-  <img src="https://img.shields.io/badge/Meta%20Marketing%20API-0866FF?style=flat-square&logo=meta&logoColor=white" alt="Meta Marketing API"/>
-  <img src="https://img.shields.io/badge/Google%20Ads%20API-4285F4?style=flat-square&logo=googleads&logoColor=white" alt="Google Ads API"/>
-  <img src="https://img.shields.io/badge/Google%20Workspace-4285F4?style=flat-square&logo=google&logoColor=white" alt="Google Workspace"/>
-  <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=slack&logoColor=white" alt="Slack"/>
-  <img src="https://img.shields.io/badge/WooCommerce-96588A?style=flat-square&logo=woocommerce&logoColor=white" alt="WooCommerce"/>
-</p>
+<details>
+<summary><b>Más herramientas</b> / estudios, proyectos y trabajo del día a día</summary>
+
+**Lenguajes** / Python · SQL · DAX · C# · C++ · Java · JavaScript · HTML · CSS
+
+**Datos y visualización** / Matplotlib · Seaborn · SQLAlchemy · MySQL · Google Sheets
+
+**Integraciones** / APIs REST · webhooks · Meta Marketing API · Google Ads API · Google Workspace · WooCommerce
+
+Son tecnologías que he usado en el trabajo, en proyectos o en los estudios, no todas con el mismo nivel.
+
+</details>
 
 ## 🚀 Lo que hago
 
@@ -126,6 +122,15 @@ Cuadros de mando de ventas y marketing que se usan a diario: lógica de negocio 
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Rodrigo160701/Rodrigo160701/output/snake-dark.svg">
   <img alt="Serpiente comiéndose el gráfico de contribuciones" src="https://raw.githubusercontent.com/Rodrigo160701/Rodrigo160701/output/snake-light.svg" width="100%">
 </picture>
+
+<a href="https://rodrigo160701.github.io/Rodrigo160701/" title="Jugar a Commit Runner">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/dino-dark.svg">
+    <img alt="Commit Runner: un dino que salta cactus hechos con mis contribuciones de GitHub. Haz clic para jugar." src="assets/dino-light.svg" width="100%">
+  </picture>
+</a>
+
+<p align="center"><sub>🦖 Cada cactus es una semana de mis commits. <a href="https://rodrigo160701.github.io/Rodrigo160701/"><b>Haz clic para jugar</b></a></sub></p>
 
 <!-- RECENT:START -->
 ### ⚡ Lo último
