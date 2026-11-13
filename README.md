@@ -122,11 +122,11 @@ Cuadros de mando de ventas y marketing: lógica de negocio pasada de Power BI (D
 <!-- RECENT:START -->
 ### Lo último
 
-- `12 nov 2026` / **PR REVISADA** [#29](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/29) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR FUSIONADA** [#26](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/26) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `12 nov 2026` / **COMMITS** / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `12 nov 2026` / **PR REVISADA** [#31](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/31) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `12 nov 2026` / **PR FUSIONADA** [#24](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/24) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `12 nov 2026` / **PR FUSIONADA** [#25](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/25) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `12 nov 2026` / **PR REVISADA** [#30](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/30) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR REVISADA** [#20](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/20) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 <!-- RECENT:END -->
 
 ---
