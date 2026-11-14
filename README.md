@@ -94,7 +94,7 @@ Cuadros de mando de ventas y marketing: lógica de negocio pasada de Power BI (D
 ## 04 / Proyectos
 
 <table>
-<tr><td width="50%" valign="top"><a href="https://github.com/thomas-more-devops/taskflow-group-3-IADI3"><b>taskflow-group-3-IADI3</b></a><br/><sub>TaskFlow · proyecto de DevOps en equipo: flujo Git con ramas, pull requests, issues y revisión de código.</sub><br/><br/><img src="https://img.shields.io/badge/-JavaScript-f1e05a?style=flat-square" alt="JavaScript"/> <sub>actualizado 12 nov 2026</sub></td><td width="50%" valign="top"><a href="https://github.com/Rodrigo160701/f1-portfolio"><b>f1-portfolio</b></a> · <a href="https://rodrigo160701.github.io/f1-portfolio/">demo ↗</a><br/><sub>F1 Fantasy League · app de escritorio en C#/WPF + MySQL con datos reales de la F1 (OpenF1 API): fichajes, ligas privadas y predicciones. Proyecto en equipo.</sub><br/><br/><img src="https://img.shields.io/badge/-HTML-e34c26?style=flat-square" alt="HTML"/> <sub>actualizado 4 abr 2026</sub></td></tr>
+<tr><td width="50%" valign="top"><a href="https://github.com/thomas-more-devops/taskflow-group-3-IADI3"><b>taskflow-group-3-IADI3</b></a><br/><sub>TaskFlow · proyecto de DevOps en equipo: flujo Git con ramas, pull requests, issues y revisión de código.</sub><br/><br/><img src="https://img.shields.io/badge/-JavaScript-f1e05a?style=flat-square" alt="JavaScript"/> <sub>actualizado 14 nov 2026</sub></td><td width="50%" valign="top"><a href="https://github.com/Rodrigo160701/f1-portfolio"><b>f1-portfolio</b></a> · <a href="https://rodrigo160701.github.io/f1-portfolio/">demo ↗</a><br/><sub>F1 Fantasy League · app de escritorio en C#/WPF + MySQL con datos reales de la F1 (OpenF1 API): fichajes, ligas privadas y predicciones. Proyecto en equipo.</sub><br/><br/><img src="https://img.shields.io/badge/-HTML-e34c26?style=flat-square" alt="HTML"/> <sub>actualizado 4 abr 2026</sub></td></tr>
 </table>
 <!-- PROJECTS:END -->
 
@@ -123,10 +123,10 @@ Cuadros de mando de ventas y marketing: lógica de negocio pasada de Power BI (D
 ### Lo último
 
 - `12 nov 2026` / **COMMITS** / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR REVISADA** [#31](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/31) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR FUSIONADA** [#24](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/24) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR FUSIONADA** [#25](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/25) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `12 nov 2026` / **PR REVISADA** [#30](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/30) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `14 nov 2026` / **PR ABIERTA** [#35](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/35) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `14 nov 2026` / **PR REVISADA** [#34](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/34) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `14 nov 2026` / **PR REVISADA** [#33](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/33) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
+- `14 nov 2026` / **PR REVISADA** [#31](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/31) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 <!-- RECENT:END -->
 
 ---
