@@ -122,11 +122,11 @@ Cuadros de mando de ventas y marketing: lógica de negocio pasada de Power BI (D
 <!-- RECENT:START -->
 ### Lo último
 
+- `15 nov 2026` / **COMMITS** / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `12 nov 2026` / **COMMITS** / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `14 nov 2026` / **COMMITS** / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `14 nov 2026` / **PR ABIERTA** [#35](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/35) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 - `14 nov 2026` / **PR REVISADA** [#34](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/34) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
-- `14 nov 2026` / **PR REVISADA** [#33](https://github.com/thomas-more-devops/taskflow-group-3-IADI3/pull/33) / [taskflow-group-3-IADI3](https://github.com/thomas-more-devops/taskflow-group-3-IADI3)
 <!-- RECENT:END -->
 
 ---
